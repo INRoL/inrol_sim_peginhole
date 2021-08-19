@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="inrol_sim_peginhole_main" name="sim" type="simulation_main" output="screen" launch-prefix="xterm -e">
+  <rosparam subst_value="true">
+    asset_root_directory: $(dirname)/../assets
+  </rosparam>
+  </node>
+
+  <node pkg="inrol_sim_peginhole_main" name="vis" type="visualization_main" output="screen" launch-prefix="xterm -e">
+  <rosparam subst_value="true">
+    asset_root_directory: $(dirname)/../assets
+  </rosparam>
+  </node>
+
+</launch>
